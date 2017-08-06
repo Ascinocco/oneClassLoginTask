@@ -16,10 +16,13 @@
     background-color: #446CB3
 }
 
-.oneClass-FormChunk {
-    margin-bottom: 12%;
+.oneClass-sm-MarginBottom {
+    margin-bottom: 50px;
 }
 
+.oneClass-md-MarginBottom {
+    margin-bottom: 75px;
+}
 /**
  * Components
  */
