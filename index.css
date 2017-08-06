@@ -1,0 +1,34 @@
+/**
+ * Hybrid approach to css using utility classes,component classes and general styling
+ * In an actual app I would break these out into separate, more organzied files
+ * but for the purpose of the demo this is fine
+ */
+
+/**
+ * Utilities
+ */
+
+ .oneClass-sm-MarginTop {
+     margin-top: 10%;
+ }
+
+.oneClass-LoginButton {
+    background-color: #446CB3
+}
+
+.oneClass-FormChunk {
+    margin-bottom: 12%;
+}
+
+/**
+ * Components
+ */
+
+/**
+ * General
+ */
+
+ body {
+     /*SAN MARINNO BLUE*/
+     background-color: #446CB3;
+ }
