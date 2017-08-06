@@ -12,8 +12,9 @@
      margin-top: 10%;
  }
 
-.oneClass-LoginButton {
-    background-color: #446CB3
+.oneClass-SignUpButton {
+    background-color: #446CB3;
+    padding: 15px;
 }
 
 .oneClass-sm-MarginBottom {
