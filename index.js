@@ -25,6 +25,8 @@ jQuery(document).ready(function () {
         // grab the form data for the request
         var formData = $("#signUpForm").serialize();
 
+        console.log(formData);
+
         $.ajax({
             url: "/form_signup",
             type: "POST",
