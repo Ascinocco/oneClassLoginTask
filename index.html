@@ -18,24 +18,24 @@
     <![endif]-->
   </head>
   <body>
-    <h1>Hello, world!</h1>
-
-    <div>
-        <form id="loginForm">
-            <input name="username" type="text" />
-            <input name="password" type="password" /> Are you already student?
-            <!--yes should be selcted by default -->
-            <input id="student_yes" name="student" type="radio" value="yes" checked="checked">
-            <input id="student_no" name="student" type="radio" value="no" checked="checked"> Check your preferred subjects:
-            <!--at least 1 subject is required -->
-            <input id="subj_math" type="checkbox"> Math
-            <input id="subj_eco" type="checkbox"> Economics
-            <input id="subj_phys" type="checkbox"> Physics
-            <input id="subj_psyc" type="checkbox"> Psychology
-            <input id="subj_prog" type="checkbox"> Programming
-            <input id="subj_lit" type="checkbox"> Literature
-            <input name="continue" type="submit" value="Login" />
-        </form>
+    <div class="row">
+        <div class="col-md-offset-3 col-lg-offset-3 col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <form id="loginForm">
+                <input name="username" type="text" />
+                <input name="password" type="password" /> Are you already student?
+                <!--yes should be selcted by default -->
+                <input id="student_yes" name="student" type="radio" value="yes" checked="checked">
+                <input id="student_no" name="student" type="radio" value="no" checked="checked"> Check your preferred subjects:
+                <!--at least 1 subject is required -->
+                <input id="subj_math" type="checkbox"> Math
+                <input id="subj_eco" type="checkbox"> Economics
+                <input id="subj_phys" type="checkbox"> Physics
+                <input id="subj_psyc" type="checkbox"> Psychology
+                <input id="subj_prog" type="checkbox"> Programming
+                <input id="subj_lit" type="checkbox"> Literature
+                <input name="continue" type="submit" value="Login" />
+            </form>
+        </div>
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
