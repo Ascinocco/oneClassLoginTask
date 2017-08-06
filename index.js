@@ -23,10 +23,8 @@ jQuery(document).ready(function () {
      */
     $("#signUpButton").click(function (e) {
         // grab the form data for the request
-        var formData = $("#signUpForm").serialize();
-
-        console.log(formData);
-
+        var formData = $("#signUpForm").serializeArray();
+        
         $.ajax({
             url: "/form_signup",
             type: "POST",
