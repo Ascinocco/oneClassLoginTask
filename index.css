@@ -23,6 +23,10 @@
 .oneClass-md-MarginBottom {
     margin-bottom: 75px;
 }
+
+.oneClass-AlertFont {
+    font-weight: bold;
+}
 /**
  * Components
  */
