@@ -6,5 +6,38 @@
  * Minimal overhead was part of my goal here.
  */
 jQuery(document).ready(function () {
-    alert('pls');
+
+    /**
+     * Handlers
+     */
+    $("#username").keydown(function (e) {
+        alert("Username")
+    });
+
+    $("#password").keydown(function (e) {
+        alert("Password");
+    });
+
+    /**
+     * Submit request via ajax
+     */
+    $("#signUpButton").click(function (e) {
+        // grab the form data for the request
+        var formData = $("#signUpForm").serialize();
+
+        $.ajax({
+            url: "/form_signup",
+            type: "POST",
+            data: formData,
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+
+            },
+
+            failure: function (err) {
+
+            }
+        });
+    });
 });
