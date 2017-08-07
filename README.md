@@ -63,7 +63,7 @@ This repo contains the Sign Up page kevin requested I write for your viewing ple
 * Bootflat  - UI library to make things look super simple 
 * JQuery    - For my page's interactibity
 
-    I tried to keep my dependencies as minimal as possible.
+    I tried to keep my dependencies as minimal as possible. I brought in everything through CDN's so you wouldn't have to install anything at all.
     I thought about using VueJS and possibly providing a webpack build system with a little node server to run everything but I figured that would be super duper over kill.
     I figured you would not want to have to read my build steps, run my build command and then run it on localhost.
     Instead everything is brought in through CDN and all of my logic is done with some pretty basic JQuery which meets your requirements.
