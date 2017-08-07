@@ -59,10 +59,12 @@ jQuery(document).ready(function () {
      * Submit request via ajax
      */
     $("#signUpButton").click(function (e) {
+        // clear errors on the top of the page on submit
+        $("#alertSuccessContainer").empty();
+        $("#alertDangerContainer").empty();
+
         // grab the form data for the request
         var formData = $("#signUpForm").serializeArray();
-
-        console.log(formData);
 
         /**
          * Make sure at least one subject has been selected
