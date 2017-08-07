@@ -6,17 +6,53 @@
  * Minimal overhead was part of my goal here.
  */
 jQuery(document).ready(function () {
+    
+    var usernameValid = false;
+    var passwordValid = false;
+
+    /**
+     * Hide username and password validation on ready 
+     */
+    $("#usernameError").hide();
+    $("#passwordError").hide();
+
+    /**
+     * Inject error content into DOM after elements are hidden
+     * to avoid a jerky annimation 
+     */
+    $("#usernameError").append(`
+        <span>Username can only contain numbers and letters</span>
+    `);
+
+    $("#passwordError").append(`
+        <span>Password must be between 6 and 20 characters</span>
+    `);
 
     /**
      * Handlers
      */
     $("#username").keyup(function (e) {
         var username = $("#username").val();
-        console.log(username);
+
+        if (/^[a-zA-Z0-9]+$/.test(username) || username == "") {
+            $("#usernameError").fadeOut("slow");
+            usernameValid = true;
+        } else {
+            $("#usernameError").fadeIn("slow");
+            usernameValid = false;
+        }
     });
 
     $("#password").keyup(function (e) {
-        alert("Password");
+        var password = $("#password").val();
+
+        if (password.length < 6 || password.length > 20) {
+            $("#passwordError").fadeIn("slow");
+            passwordValid = false;
+        } else {
+            $("#passwordError").fadeOut("slow");
+            passwordValid = true;
+        }
     });
 
     /**
@@ -44,6 +80,13 @@ jQuery(document).ready(function () {
                 <div class="alert alert-danger">
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                     <p class="oneClass-AlertFont">You must choose at least one subject.</p>
+                </div>
+            `);
+        } else if (passwordValid == false || usernameValid == false) {
+            $("#alertDangerContainer").append(`
+                <div class="alert alert-danger">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <p class="oneClass-AlertFont">Check your credentials!</p>
                 </div>
             `);
         } else {
