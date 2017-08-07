@@ -24,7 +24,7 @@ jQuery(document).ready(function () {
     $("#signUpButton").click(function (e) {
         // grab the form data for the request
         var formData = $("#signUpForm").serializeArray();
-        
+
         $.ajax({
             url: "/form_signup",
             type: "POST",
@@ -32,11 +32,34 @@ jQuery(document).ready(function () {
             dataType: "json",
             contentType: "application/json; charset=utf-8",
             success: function (data) {
+                /**
+                 * This will never display because the request will always error out because there is no server
+                 * It's here just to show you an idea of what would be displyed if this actually worked.
+                 */
+                $("#alertSuccessContainer").append(`
+                    <div class="alert alert-success">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <p class="oneClass-AlertFont">Data sent to server!</p>
+                    </div>
+                `);
+            },
 
+            error: function (err) {
+                $("#alertDangerContainer").append(`
+                    <div class="alert alert-danger">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <p class="oneClass-AlertFont">There is no server implemented! You can't login :P</p>
+                    </div>
+                `);
             },
 
             failure: function (err) {
-
+                $("#alertDangerContainer").append(`
+                    <div class="alert alert-danger">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <p class="oneClass-AlertFont">There is no server. You cannot do that :P</p>
+                    </div>
+                `);
             }
         });
     });
