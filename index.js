@@ -10,11 +10,12 @@ jQuery(document).ready(function () {
     /**
      * Handlers
      */
-    $("#username").keydown(function (e) {
-        alert("Username")
+    $("#username").keyup(function (e) {
+        var username = $("#username").val();
+        console.log(username);
     });
 
-    $("#password").keydown(function (e) {
+    $("#password").keyup(function (e) {
         alert("Password");
     });
 
